@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca do CEEPPLG</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-          rel="stylesheet"
+    <link crossorigin="anonymous"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+          rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div id="container" class="container">
-        <h1>Bem vindo a biblioteca</h1>
-        <a class="btn btn-primary mb-4" th:href="@{/livros/cadastro}">
-            <i class="fas fa-plus"></i> Adicionar
-        </a>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>TÍTULO</th>
-                    <th>AUTOR</th>
-                    <th>EDITORA</th>
-                    <th>AÇÕES</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="livro : ${livros}">
-                    <td th:text="${livro.titulo}"></td>
-                    <td th:text="${livro.autor.nome}"></td>
-                    <td th:text="${livro.editora.descricao}"></td>
-                    <td>
-                        <a class="btn btn-success btn-sm" th:href="@{/livros/editar/{id}(id=${livro.id})}">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="container" id="container">
+    <h1>Bem vindo a biblioteca</h1>
+    <a class="btn btn-primary mb-4" th:href="@{/livros/cadastro}">
+        <i class="fas fa-plus"></i> Adicionar
+    </a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>TÍTULO</th>
+            <th>AUTOR</th>
+            <th>EDITORA</th>
+            <th>AÇÕES</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="livro : ${livros}">
+            <td th:text="${livro.titulo}"></td>
+            <td th:text="${livro.autor.nome}"></td>
+            <td th:text="${livro.editora.descricao}"></td>
+            <td>
+                <a class="btn btn-success btn-sm" th:href="@{/livros/editar/{id}(id=${livro.id})}">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

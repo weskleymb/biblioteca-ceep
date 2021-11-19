@@ -2,7 +2,6 @@ package br.com.ceepplg.livraria.controle;
 
 
 import br.com.ceepplg.livraria.modelo.Autor;
-import br.com.ceepplg.livraria.modelo.Editora;
 import br.com.ceepplg.livraria.repositorio.Autores;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

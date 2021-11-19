@@ -4,7 +4,6 @@ import br.com.ceepplg.livraria.modelo.Livro;
 import br.com.ceepplg.livraria.repositorio.Autores;
 import br.com.ceepplg.livraria.repositorio.Editoras;
 import br.com.ceepplg.livraria.repositorio.Livros;
-import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
