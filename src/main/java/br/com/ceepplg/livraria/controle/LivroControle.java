@@ -40,6 +40,8 @@ public class LivroControle {
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable Integer id, Model model) {
         Livro livro = livros.findById(id).get();
+        model.addAttribute("editoras", editoras.findAll());
+        model.addAttribute("autores", autores.findAll());
         model.addAttribute("livro", livro);
         return "livros/form";
     }
